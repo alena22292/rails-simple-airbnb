@@ -1,12 +1,38 @@
-<div class='box'>
-<div class='banner'>
-  <img src="<%= @flat.picture_url %>">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @flat.picture_url %>);">
 </div>
-<h1><%= @flat.name %></h1>
-<h4><%= @flat.address%></h4>
-
-<h2>A bit more about this flat...</h2>
-<p><%= @flat.description %></p>
+<div class='box'>
+  <div class='box-1'>
+    <div class='heading'>
+      <h1><%= @flat.name %></h1>
+      <h4><%= @flat.address%></h4>
+    </div>
+    <div class='article'>
+      <h2>A bit more about this flat...</h2>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+  <div class='box-2'>
+    <div class='booking'>
+      <h3>Book this place!</h3>
+      form_for
+    </div>
+    <div class='details'>
+      <h3>Details:</h3>
+      <div class='icons'>
+      <span><i class="fas fa-users"></i> <%= @flat.number_of_guests %></span>
+      <span><i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></span>
+      </div>
+    </div>
+    <div class='share'>
+      <h4>Share:</h4>
+      <div class='icons'>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="far fa-paper-plane"></i>
+      <i class="fas fa-at"></i>
+      </div>
+    </div>
+  </div>
 </div>
 
 
