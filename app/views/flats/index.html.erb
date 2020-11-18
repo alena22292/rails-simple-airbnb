@@ -1,0 +1,31 @@
+<h1>List of Flats(<%= @flats.count %>)</h1>
+
+<div class='d-flex flex-wrap'>
+
+  <% @flats.each do |flat| %>
+  <div class='card m-2'>
+    <img src="<%= flat.picture_url %>">
+    <h3><%= flat.name %></h3>
+    <p><%= flat.address %></p>
+    <div class="details">
+    <span><i class="fas fa-users"></i> <%= flat.number_of_guests %></span>
+    <span><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></span>
+    </div>
+    <div class='icons'><%= link_to flat_path(flat) do %>
+     <i class="far fa-eye"></i>
+     <% end %>
+     <%= link_to flat_path(flat) do %>
+     <i class="fas fa-pencil-alt"></i>
+     <% end %>
+     <%= link_to flat_path(flat.id),
+     method: :delete,
+     data: { confirm: 'Are you sure?' } do %>
+     <i class="fas fa-trash-alt"></i>
+     <% end %>
+   </div>
+ </div>
+ <% end %>
+
+</div>
+
+

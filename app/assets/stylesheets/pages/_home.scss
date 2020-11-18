@@ -1,0 +1,40 @@
+// Specific CSS for your home-page
+body {
+  background-color: #faf3dd;
+}
+.card {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 30%;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  background-color: #68b0ab;
+  i {
+    color: #ecf4f3;
+    opacity: 0.6;
+    &:hover {
+     opacity: 0.9;
+     font-weight: bold;
+    }
+  }
+}
+.details {
+  background-color: #ecf4f3;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.box {
+  margin: 0 auto;
+}
+.banner {
+  width: 90%;
+  margin: 0 auto;
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
